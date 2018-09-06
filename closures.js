@@ -63,7 +63,13 @@ callJake('435-555-9248')
 */
 
 //Code Here
-
+function makeCounter() {
+  var ans = 0;
+  function counter() {
+    return ans += 1;
+  };
+  return counter;
+};
 
 
 //Uncomment this once you make your function
