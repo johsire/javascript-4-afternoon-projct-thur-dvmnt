@@ -36,7 +36,7 @@ function Employee(name, email, hireDate) {
 */
 
 // Code here
-
+let bob = new Employee('Bob', 'bob@gmail.com', '01-02-98')
 
 
 ////////// PROBLEM 4 //////////
