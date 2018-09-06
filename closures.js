@@ -181,9 +181,19 @@ function secretNumber() {
 
   return {
     // Code here
+    addToSecret: function(num) {
+      secret + num;
+      return secret
+    },
+    takeAwayFromSecret: function(num) {
+      secret - num;
+      return secret
+    }
   };
 }
 
+addToSecret(5);
+takeAwayFromSecret(2);
 
 
 ////////// PROBLEM 8 //////////
@@ -204,11 +214,26 @@ function secretNumber() {
   Fix the code below to log the desired output.
 */
 
+// function timeOutCounter() {
+//   for (var i = 0; i <= 5; i++) {
+//     setTimeout(function() {
+//       console.log(i);
+//     }, i * 1000);
+//   }
+// };
+
+// var inner = timeOutCounter();
+// timeOutCounter();
+
 function timeOutCounter() {
-  for (var i = 0; i <= 5; i++) {
-    setTimeout(function() {
+  for (var i = 0; i <= 5; i ++) {
+    setTimeout(newScope(i), i * 1000)
+  }
+
+  function newScope(i) {
+    return function() {
       console.log(i);
-    }, i * 1000);
+    }
   }
 }
 timeOutCounter();
