@@ -148,7 +148,7 @@ var module = (function() {
   var person = {
     name: "phillip",
     age: 29,
-    location: "Utah"
+    location: "Utah",
   };
 
   function privateMethod(){
@@ -159,6 +159,9 @@ var module = (function() {
   // outside our lexical scope
   return {
     // Code here.
+    publicMethod: function() {
+      return privateMethod()
+    }
   };
 })();
 
